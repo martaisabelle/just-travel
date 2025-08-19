@@ -8,14 +8,33 @@ display: none - o objeto some
 padding: 10px 0px; - primeiro valor: cima e baixo, 0px laterais
 */
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     color: aliceblue;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body { height: 100%; }
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -66,7 +85,6 @@ nav a:hover {
   color: #A0A8B4; 
 }
 
-
 .img-pesquisa {
      display: block; 
      margin: 30px 30px 0 auto;
@@ -114,10 +132,25 @@ nav a:hover {
 
 .section-texto h4 {
     background: rgb(201, 132, 63);
-    padding: 5px;
+    padding: 10px 20px;              
     color: black;
-    width: 120px;
-    margin: 5% auto 0 auto
+    width: fit-content;              
+    margin: 5% auto 0 auto;
+    text-align: center;
+    transition: background 0.3s ease;
+    border-radius: 25px;             
+    cursor: pointer;
+}
+
+.section-texto h4 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.section-texto h4:hover {
+    background: rgb(161, 102, 43);  
 }
 
 .img-container {
@@ -128,35 +161,53 @@ nav a:hover {
 }
 
 /* estilo do footer*/
-.rodape {
-    /* background:  rgb(128, 101, 66); */
-    width: 100%;
-    height: 150px;
-    display: flex;
-}
 
 .section-social {
-    width: 10%;
-    display: flex;
-    height: auto;
-    margin: 30px auto 0 auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  order: 2;          
+  margin-left: auto; 
 }
+
 
 .social {
-    width: auto;
-    height: 25px;
-    margin-top: 0 10px;
+  width: 25px;   
+  height: 25px;
 }
 
-.rodape-text {
-    height: auto;
-    margin: 0 0 0 auto;
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;   
+  margin: 0 auto;     
+  padding: 0 40px;   
+  height: 90px;
 }
+
+.rodape-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  order: 1;                
+}
+
 
 .p-rodape {
-    width: 500px;
     color: black;
-} 
+    text-align: left;
+    margin: 0;
+    white-space: nowrap; /* impede quebra de linha */
+    font-size: 12px;
+}
+
+.p-creditos {
+    color: black;
+    text-align: right;
+    margin: 0; 
+    font-size: 12px;
+}
 
 button {
     width: 85%;
@@ -168,12 +219,12 @@ button {
 
 /* barra de pesquisa */
 .search {
-    width: 200px;              /* largura da barra */
+    width: 200px;
     border: 1px solid #ccc;
     border-radius: 20px;
-    background: white;
-    padding: 5px 10px;         /* altura*/
-    margin: 30px auto 0 auto;  /* centraliza dentro do header-pesquisa */
+    background: white url("./imagens/lupa.png") no-repeat 10px center; 
+    background-size: 16px; /* tamanho da lupa */
+    margin: 30px auto 0 auto;
 }
 
 .search input {
@@ -183,6 +234,8 @@ button {
     background: transparent;
     color: #333;
     font-size: 14px;
+    padding: 5px 10px 5px 35px; 
+    text-align: left;
 }
 
 .search input::placeholder {
@@ -201,3 +254,4 @@ button {
 .search button:hover {
     background: rgb(30, 90, 200);
 }
+
