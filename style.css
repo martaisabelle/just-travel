@@ -1,0 +1,203 @@
+/* seletor universal
+margin -
+padding - 
+background-image - 
+display -
+opacity
+display: none - o objeto some
+padding: 10px 0px; - primeiro valor: cima e baixo, 0px laterais
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+body {
+    background-image: url(./imagens/bg1.png);
+    background-size: contain;
+}
+
+/*estilo do header*/
+.header {
+    /* background: rgb(201, 132, 63); */
+    width: 100%;
+    height: 150px;
+    display: flex;
+}
+
+.header-logo, .header-pesquisa {
+    width: 25%;
+    height: 100px;
+    /* background: rgb(147, 219, 219); */
+    margin-top: 25px;
+}
+
+.Menu-bar {
+    width: 50%;
+    height: 100px;
+    /* background: rgb(147, 212, 255); */
+    margin-top: 25px;
+}
+
+.Menu {
+    list-style-type: none;
+    display: flex;
+    width: 40%;
+    background: navy;
+    padding: 10px;
+    margin: 30px auto 0 auto;
+}
+
+.Menu li {
+    margin: auto;
+}
+
+nav a {
+  color: white;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  color: #A0A8B4; 
+}
+
+
+.img-pesquisa {
+     display: block; 
+     margin: 30px 30px 0 auto;
+}
+
+/* estilo da main*/
+
+.container-principal {
+    background: rgb(54, 121, 143);
+    width: 100%;
+    height: 700px;
+    display: flex;
+}
+
+.section-texto, .section-image, .rodape-text {
+    width: 50%;
+    height: 500px;
+    margin-top: 50px;
+}
+
+.section-texto h3 {
+    margin: 10% auto 0 auto;
+    width: 200px;
+    background: rgb(201, 132, 63);
+    text-align: left;
+    padding: 10px;
+}
+
+.section-texto h1 {
+    width: 220px;
+    text-align: left;
+    margin: auto;
+    font-size: 36px;
+}
+
+.section-texto p, .p-rodape {
+    width: 250px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    hyphens: auto; 
+}
+
+.section-texto h4 {
+    background: rgb(201, 132, 63);
+    padding: 5px;
+    color: black;
+    width: 120px;
+    margin: 5% auto 0 auto
+}
+
+.img-container {
+    width: 700px; 
+    height: auto;
+    display: block;
+    margin: -50px 0 0 0;
+}
+
+/* estilo do footer*/
+.rodape {
+    /* background:  rgb(128, 101, 66); */
+    width: 100%;
+    height: 150px;
+    display: flex;
+}
+
+.section-social {
+    width: 10%;
+    display: flex;
+    height: auto;
+    margin: 30px auto 0 auto;
+}
+
+.social {
+    width: auto;
+    height: 25px;
+    margin-top: 0 10px;
+}
+
+.rodape-text {
+    height: auto;
+    margin: 0 0 0 auto;
+}
+
+.p-rodape {
+    width: 500px;
+    color: black;
+} 
+
+button {
+    width: 85%;
+    background: rgb(50, 111, 223);
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 90px;
+}
+
+/* barra de pesquisa */
+.search {
+    width: 200px;              /* largura da barra */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: white;
+    padding: 5px 10px;         /* altura*/
+    margin: 30px auto 0 auto;  /* centraliza dentro do header-pesquisa */
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333;
+    font-size: 14px;
+}
+
+.search input::placeholder {
+    color: #888;
+}
+
+.search button {
+    border: none;
+    background: rgb(50, 111, 223);
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search button:hover {
+    background: rgb(30, 90, 200);
+}
