@@ -255,3 +255,8 @@ button {
     background: rgb(30, 90, 200);
 }
 
+/* página de menu */
+
+img[alt="Imagem do Peru"]:hover {
+  content: url("imagens/peru2.jpg");
+}
