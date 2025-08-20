@@ -22,9 +22,10 @@ padding: 10px 0px; - primeiro valor: cima e baixo, 0px laterais
     text-decoration: none;
     color: aliceblue;
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+
     text-align: center;
     font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
 }
 
 html {
@@ -99,18 +100,45 @@ nav a:hover {
     display: flex;
 }
 
+.img-container {
+  width: 650px;   /* pode ajustar o tamanho se quiser menor */
+  height: auto;
+  transform: translate(-130px, -70px); 
+  /* -150px puxa a mala para a ESQUERDA 
+     -60px sobe a mala */
+}
+
+.section-texto, .section-imagem {
+  width: 50%;
+  height: 500px;
+  margin-top: 50px;
+}
+
+.section-texto {
+  background: linear-gradient(180deg, #31708E 0%, #24586E 100%);
+  color: #f1f1f1;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 8px;
+  
+}
+
+.section-texto p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
 .section-texto, .section-image, .rodape-text {
     width: 50%;
     height: 500px;
     margin-top: 50px;
 }
 
-.section-texto h3 {
-    margin: 10% auto 0 auto;
-    width: 200px;
-    background: rgb(201, 132, 63);
-    text-align: left;
-    padding: 10px;
+.section-texto h2 {
+  color: rgb(238, 171, 105);
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .section-texto h1 {
@@ -153,11 +181,12 @@ nav a:hover {
     background: rgb(161, 102, 43);  
 }
 
-.img-container {
-    width: 700px; 
-    height: auto;
-    display: block;
-    margin: -50px 0 0 0;
+.section-texto .texto-wrap {
+  margin-left: 40px; /* só o conteúdo vai para a direita */
+}
+
+.section-texto {
+  transform: translateX(40px); /* move visualmente sem empurrar a outra coluna */
 }
 
 /* estilo do footer*/
@@ -217,6 +246,25 @@ button {
     margin-top: 90px;
 }
 
+.btn {
+  display: inline-block;
+  background: rgb(201, 132, 63);  /* laranja */
+  color: #ffffff;                    /* texto branco pra contraste */
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-align: center;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.btn:hover {
+  background: rgb(161, 102, 43);  /* versão mais escura */
+  color: #fff;                    /* mantém contraste */
+}
+
 /* barra de pesquisa */
 .search {
     width: 200px;
@@ -257,6 +305,9 @@ button {
 
 /* página de menu */
 
-img[alt="Imagem do Peru"]:hover {
-  content: url("imagens/peru2.jpg");
+.destinos p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;    /* tamanho do texto */
+  color: #000;        /* força a cor preta */
 }
