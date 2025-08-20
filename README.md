@@ -1,3 +1,2 @@
 # just-travel
-Just Travel é um site de viagens desenvolvido como projeto pessoal, com o objetivo de explorar e praticar conceitos de HTML, CSS e JavaScript.
-A proposta do site é ajudar o usuário a descobrir destinos incríveis pelo mundo, trazendo roteiros, dicas e inspirações de forma simples e acessível.
+Just Travel is a travel website developed as a personal project, aiming to explore and practice HTML, CSS, and JavaScript concepts. The website’s purpose is to help users discover amazing destinations around the world, offering itineraries, tips, and inspiration in a simple and accessible way.
