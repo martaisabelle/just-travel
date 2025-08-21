@@ -20,9 +20,9 @@ padding: 10px 0px; - primeiro valor: cima e baixo, 0px laterais
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: aliceblue;
-    font-family: "Open Sans", sans-serif;
 
+    font-family: "Open Sans", sans-serif;
+    
     text-align: center;
     font-family: "Open Sans", sans-serif;
     box-sizing: border-box;
@@ -34,9 +34,7 @@ html {
 
 html, body { height: 100%; }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 body {
     background-image: url(./imagens/bg1.png);
@@ -115,18 +113,35 @@ nav a:hover {
 }
 
 .section-texto {
-  background: linear-gradient(180deg, #31708E 0%, #24586E 100%);
-  color: #f1f1f1;
-  padding: 40px;
+  width: 50%;
   max-width: 600px;
+  min-height: 600px;    /* menor que antes */
+  padding: 50px 40px;
   margin: auto;
   border-radius: 8px;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  background: linear-gradient(180deg, #31708E 0%, #24586E 100%);
+  color: #f1f1f1;
+}
+
+.section-texto .btn {
+  display: inline-block;
+  width: auto;
+  min-width: 140px;
+  padding: 10px 22px;
+  font-size: 16px;
+  margin: 8px auto 0;
+  transform: translateY(-33px); /* aumentar valor absoluto sobe mais */
+  transition: transform .15s ease;
 }
 
 .section-texto p {
-  line-height: 1.7;
-  font-size: 16px;
+  margin-top: 6px;             /* reduz margem superior se existir */
+  transform: translateY(-30px); /* sobe o parágrafo 14px */
+  transition: transform .12s;
 }
 
 .section-texto, .section-image, .rodape-text {
@@ -136,9 +151,13 @@ nav a:hover {
 }
 
 .section-texto h2 {
-  color: rgb(238, 171, 105);
-  font-size: 24px;
-  margin-bottom: 20px;
+  display: inline-block;
+  background:git rgb(201, 132, 63);
+  color: #0b1b1b;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 20px 10px 20px; /* RIGHT reduzido de 160px → 80px */
+  margin: 0 auto 18px;
 }
 
 .section-texto h1 {
@@ -303,7 +322,7 @@ button {
     background: rgb(30, 90, 200);
 }
 
-/* página de menu */
+/* página do menu */
 
 .destinos p {
   font-family: Arial, Helvetica, sans-serif;
