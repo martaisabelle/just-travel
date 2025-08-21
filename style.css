@@ -94,16 +94,20 @@ nav a:hover {
 .container-principal {
     background: rgb(54, 121, 143);
     width: 100%;
-    height: 700px;
+    min-height: 700px; /* substitui height por min-height */
     display: flex;
 }
 
 .img-container {
-  width: 650px;   /* pode ajustar o tamanho se quiser menor */
+  position: absolute;
+  width: 850px;   /* pode ajustar o tamanho se quiser menor */
   height: auto;
-  transform: translate(-130px, -70px); 
-  /* -150px puxa a mala para a ESQUERDA 
-     -60px sobe a mala */
+  left: -50px;   /* puxa para a esquerda */
+  top: -185px;    /* sobe a mala */
+}
+
+.section-imagem {
+  position: relative;
 }
 
 .section-texto, .section-imagem {
@@ -151,12 +155,12 @@ nav a:hover {
 }
 
 .section-texto h2 {
-  display: inline-block;
-  background:git rgb(201, 132, 63);
-  color: #0b1b1b;
+  display: inline-block; /* faz a caixa se ajustar ao tamanho do texto */
+  background-color: #e9a847; /* cor da caixa (amarelo/laranja) */
+  color: #000000; /* cor do texto */
   font-weight: 600;
   letter-spacing: 1px;
-  padding: 10px 20px 10px 20px; /* RIGHT reduzido de 160px → 80px */
+  padding: 10px 20px; /* espaço interno para formar a caixa */
   margin: 0 auto 18px;
 }
 
@@ -178,7 +182,7 @@ nav a:hover {
 }
 
 .section-texto h4 {
-    background: rgb(201, 132, 63);
+    background:#f9a825;
     padding: 10px 20px;              
     color: black;
     width: fit-content;              
@@ -194,10 +198,7 @@ nav a:hover {
     text-decoration: none;
     font-weight: bold;
     display: block;
-}
-
-.section-texto h4:hover {
-    background: rgb(161, 102, 43);  
+    
 }
 
 .section-texto .texto-wrap {
