@@ -80,6 +80,7 @@ nav a {
   color: white;
   transition: all 0.3s ease;
 }
+
 nav a:hover {
   color: #A0A8B4; 
 }
@@ -129,7 +130,9 @@ nav a:hover {
   gap: 18px;
   background: linear-gradient(180deg, #31708E 0%, #24586E 100%);
   color: #f1f1f1;
+  margin-right: 90px; /* empurra todo o bloco para a direita */
 }
+
 
 .section-texto .btn {
   display: inline-block;
