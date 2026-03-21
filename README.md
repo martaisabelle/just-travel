@@ -4,7 +4,7 @@ Aplicação web de viagens desenvolvida com HTML, CSS e JavaScript.
 
 Acesso: https://just-travel-one.vercel.app/
 
-Tecnologias: HTML, CSS e JavaScript
+Tecnologias: HTML, CSS e JavaScript.
 
 Status: em desenvolvimento.
 
