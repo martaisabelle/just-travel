@@ -508,13 +508,26 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ── FAB CHAT — only runs on help page ── */
   if (document.body.classList.contains("help-page")) {
     (function initHelpFab() {
-      var fab     = document.getElementById("help-chat-fab");
-      var window_ = document.getElementById("help-chat-window");
+      var fab      = document.getElementById("help-chat-fab");
+      var fabIcon  = fab ? fab.querySelector(".help-chat-fab__icon") : null;
+      var window_  = document.getElementById("help-chat-window");
       var closeBtn = document.getElementById("help-chat-close");
-      var input   = document.getElementById("help-chat-input");
-      var sendBtn = document.getElementById("help-chat-send");
+      var input    = document.getElementById("help-chat-input");
+      var sendBtn  = document.getElementById("help-chat-send");
       var messages = document.getElementById("help-chat-messages");
+      var statusDot  = document.getElementById("help-chat-status-dot");
+      var statusText = document.getElementById("help-chat-status-text");
       if (!fab || !window_) return;
+
+      /* Status: online seg–sex 09h–18h */
+      (function updateStatus() {
+        var now = new Date();
+        var day = now.getDay();
+        var h   = now.getHours();
+        var online = day >= 1 && day <= 5 && h >= 9 && h < 18;
+        if (statusDot)  statusDot.className  = "help-chat-status__dot help-chat-status__dot--" + (online ? "online" : "offline");
+        if (statusText) statusText.textContent = online ? "Estamos online!" : "Estamos offline!";
+      })();
 
       var replies = [
         "Olá! Como posso te ajudar hoje?",
@@ -526,11 +539,34 @@ document.addEventListener("DOMContentLoaded", function () {
       var replyIndex = 0;
       var welcomed = false;
 
+      /* FAB icon toggle */
+      function setFabIcon(isOpen) {
+        if (!fabIcon) return;
+        if (isOpen) {
+          fabIcon.style.display = "none";
+          var xi = fab.querySelector(".help-chat-fab__close-icon");
+          if (!xi) {
+            xi = document.createElement("span");
+            xi.className = "help-chat-fab__close-icon";
+            xi.textContent = "✕";
+            xi.style.cssText = "font-size:1.2rem;font-weight:700;line-height:1;color:#1a1a1a;";
+            fab.appendChild(xi);
+          } else {
+            xi.style.display = "";
+          }
+        } else {
+          fabIcon.style.display = "";
+          var xi = fab.querySelector(".help-chat-fab__close-icon");
+          if (xi) xi.style.display = "none";
+        }
+      }
+
       /* Open / close */
       function openChat() {
         window_.classList.add("help-chat-window--open");
         window_.setAttribute("aria-hidden", "false");
         fab.setAttribute("aria-expanded", "true");
+        setFabIcon(true);
         if (!welcomed) {
           welcomed = true;
           setTimeout(function () { addBubble("👋 Olá! Como podemos te ajudar?", "agent"); }, 400);
@@ -542,6 +578,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window_.classList.remove("help-chat-window--open");
         window_.setAttribute("aria-hidden", "true");
         fab.setAttribute("aria-expanded", "false");
+        setFabIcon(false);
         fab.focus();
       }
 
@@ -716,8 +753,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
       function setFabIcon(isOpen) {
         if (!fabIcon) return;
-        fabIcon.textContent = isOpen ? "✕" : "💬";
-        fabIcon.style.fontSize = isOpen ? "1.2rem" : "";
+        if (isOpen) {
+          fabIcon.style.display = "none";
+          var xi = fab.querySelector(".global-chat-fab__close-icon");
+          if (!xi) {
+            xi = document.createElement("span");
+            xi.className = "global-chat-fab__close-icon";
+            xi.textContent = "✕";
+            xi.style.cssText = "font-size:1.2rem;font-weight:700;line-height:1;color:#1a1a1a;";
+            fab.appendChild(xi);
+          } else {
+            xi.style.display = "";
+          }
+        } else {
+          fabIcon.style.display = "";
+          var xi = fab.querySelector(".global-chat-fab__close-icon");
+          if (xi) xi.style.display = "none";
+        }
       }
 
       function openChat() {
@@ -826,6 +878,117 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function () { toggleDropdown(false); });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") toggleDropdown(false);
+    });
+  })();
+
+  /* ── LOGIN MODAL — runs on all pages ── */
+  (function initLoginModal() {
+    var isSubpage = window.location.pathname.indexOf("/pages/") !== -1;
+    var prefix    = isSubpage ? "../imagens/" : "./imagens/";
+
+    var overlay = document.createElement("div");
+    overlay.className = "login-modal-overlay";
+    overlay.id        = "login-modal-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-labelledby", "login-modal-title");
+    overlay.innerHTML = '\
+      <div class="login-modal" id="login-modal">\
+        <div class="login-modal__header">\
+          <button class="login-modal__close" id="login-modal-close" aria-label="Fechar login">✕</button>\
+          <img src="' + prefix + 'logo.png" alt="Just Travel" class="login-modal__logo">\
+          <h2 class="login-modal__title" id="login-modal-title">Bem-vindo de volta</h2>\
+          <p class="login-modal__subtitle">Acesse sua conta Just Travel</p>\
+        </div>\
+        <div class="login-modal__body">\
+          <div class="login-modal__field">\
+            <label for="lm-email" class="login-modal__label">E-mail</label>\
+            <input class="login-modal__input" id="lm-email" type="email" placeholder="seu@email.com" autocomplete="email">\
+          </div>\
+          <div class="login-modal__field">\
+            <label for="lm-pass" class="login-modal__label">Senha</label>\
+            <input class="login-modal__input" id="lm-pass" type="password" placeholder="Sua senha">\
+          </div>\
+          <div class="login-modal__row">\
+            <label class="login-modal__remember"><input type="checkbox"> Lembrar de mim</label>\
+            <span class="login-modal__forgot">Esqueceu a senha?</span>\
+          </div>\
+          <button class="login-modal__submit" id="lm-submit">Entrar ✈</button>\
+          <div class="login-modal__divider">ou</div>\
+          <p class="login-modal__register">Não tem conta? <a id="lm-register-link">Cadastre-se grátis</a></p>\
+        </div>\
+        <div class="login-modal__success">\
+          <div class="login-modal__success-icon">✈</div>\
+          <p class="login-modal__success-text">Login realizado!</p>\
+          <p class="login-modal__success-sub">Boa viagem, viajante. ✨</p>\
+        </div>\
+      </div>';
+
+    document.body.appendChild(overlay);
+
+    var modal     = document.getElementById("login-modal");
+    var closeBtn  = document.getElementById("login-modal-close");
+    var submitBtn = document.getElementById("lm-submit");
+    var emailInp  = document.getElementById("lm-email");
+    var passInp   = document.getElementById("lm-pass");
+
+    function openModal() {
+      overlay.classList.add("login-modal-overlay--open");
+      document.body.classList.add("modal-open");
+      setTimeout(function () { if (emailInp) emailInp.focus(); }, 100);
+    }
+
+    function closeModal() {
+      overlay.classList.remove("login-modal-overlay--open");
+      document.body.classList.remove("modal-open");
+      setTimeout(function () {
+        modal.classList.remove("login-modal--success");
+        if (emailInp) emailInp.value = "";
+        if (passInp)  passInp.value  = "";
+      }, 300);
+    }
+
+    document.querySelectorAll(".header-auth--login").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && overlay.classList.contains("login-modal-overlay--open")) closeModal();
+    });
+
+    if (submitBtn) {
+      submitBtn.addEventListener("click", function () {
+        var email = emailInp ? emailInp.value.trim() : "";
+        var pass  = passInp  ? passInp.value.trim()  : "";
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          if (emailInp) { emailInp.focus(); emailInp.style.borderColor = "#e05252"; }
+          return;
+        }
+        if (!pass) {
+          if (passInp) { passInp.focus(); passInp.style.borderColor = "#e05252"; }
+          return;
+        }
+        if (emailInp) emailInp.style.borderColor = "";
+        if (passInp)  passInp.style.borderColor  = "";
+        modal.classList.add("login-modal--success");
+        setTimeout(closeModal, 2200);
+      });
+    }
+
+    [emailInp, passInp].forEach(function (el) {
+      if (el) el.addEventListener("input", function () { el.style.borderColor = ""; });
+    });
+    [emailInp, passInp].forEach(function (el) {
+      if (el) el.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") { e.preventDefault(); submitBtn && submitBtn.click(); }
+      });
     });
   })();
 
