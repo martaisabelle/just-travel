@@ -2,9 +2,7 @@
 
 Aplicação web de viagens desenvolvida com HTML, CSS e JavaScript.
 
-Acesso
-
-https://just-travel-one.vercel.app/
+Acesso: https://just-travel-one.vercel.app/
 
 Tecnologias
 
