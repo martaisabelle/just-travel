@@ -1,6 +1,24 @@
-# just-travel
-Site de viagens desenvolvido com HTML, CSS e JavaScript.
-## 🔗 Acesse o projeto em **[just-travel-one.vercel.app](https://just-travel-one.vercel.app/index.html)**
-Status: em desenvolvimento.
+## Just Travel
 
-Desenvolvido por [Marta Isabelle](https://martaisabelle.vercel.app/)
+Aplicação web de viagens desenvolvida com HTML, CSS e JavaScript.
+
+Acesso
+
+https://just-travel-one.vercel.app/
+
+Tecnologias
+
+HTML
+
+CSS
+
+JavaScript
+
+Status
+
+Em desenvolvimento.
+
+Autor
+
+Marta Isabelle
+https://martaisabelle.vercel.app/
