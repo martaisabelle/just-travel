@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Just Travel — find your next trip in minutes. Compare flights, hotels and packages in one place.">
+  <meta name="keywords" content="travel, vacation, flights, hotels, packages, tourism, world travel">
+  <meta name="author" content="Marta Isabelle">
+  <meta property="og:title" content="Just Travel — Find Your Next Trip">
+  <meta property="og:description" content="Compare flights, hotels and packages in one place.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./imagens/mala.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Just Travel — Find Your Next Trip</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-logo">
+      <a href="./index.html" aria-label="Just Travel — Home">
+        <img src="./imagens/logo.png" alt="Just Travel logo" width="100" height="auto">
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="./index.html" class="nav-link" aria-current="page"><img src="./imagens/home.png" alt="" class="nav-icon" aria-hidden="true">Início</a></li>
+        <li><a href="./pages/menu.html" class="nav-link nav-link--highlight"><img src="./imagens/destinations.png" alt="" class="nav-icon" aria-hidden="true">Destinos</a></li>
+        <li><a href="./pages/contact.html" class="nav-link"><img src="./imagens/contact.png" alt="" class="nav-icon" aria-hidden="true">Contato</a></li>
+        <li><a href="./pages/help.html" class="nav-link"><img src="./imagens/help.png" alt="" class="nav-icon" aria-hidden="true">Ajuda</a></li>
+      </ul>
+    </nav>
+
+    <!-- Language + Auth -->
+    <div class="header-actions">
+      <button class="header-lang" id="header-lang-btn" type="button" aria-label="Selecionar idioma" aria-expanded="false">
+        <img src="./imagens/br.png" alt="Brasil" class="header-lang__flag" id="header-lang-flag">
+        <span class="header-lang__code" id="header-lang-code">PT</span>
+        <span class="header-lang__arrow" aria-hidden="true">▼</span>
+        <div class="header-lang__dropdown" id="header-lang-dropdown" role="listbox">
+          <div class="header-lang__option" data-lang="PT" data-flag="./imagens/br.png" data-alt="Brasil" role="option">
+            <img src="./imagens/br.png" alt="Brasil"> PT
+          </div>
+          <div class="header-lang__option" data-lang="EN" data-flag="./imagens/eua.png" data-alt="EUA" role="option">
+            <img src="./imagens/eua.png" alt="EUA"> EN
+          </div>
+          <div class="header-lang__option" data-lang="ES" data-flag="./imagens/spain.png" data-alt="España" role="option">
+            <img src="./imagens/spain.png" alt="España"> ES
+          </div>
+        </div>
+      </button>
+      <a href="#" class="header-auth header-auth--register">Cadastre-se</a>
+      <a href="#" class="header-auth header-auth--login">Login</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-label="Hero — find your next trip">
+
+      <div class="hero-content">
+        <span class="hero-badge">✈ Confiado por mais de 500 viajantes</span>
+        <h1 class="hero-title">Encontre sua viagem <br><span class="hero-title__accent">em minutos.</span></h1>
+        <p class="hero-tagline">Compare voos, hotéis e pacotes — tudo em um só lugar.</p>
+        <ul class="hero-bullets">
+          <li>✓ Ofertas exclusivas atualizadas diariamente</li>
+          <li>✓ Sem taxas ocultas</li>
+          <li>✓ Suporte disponível 24h</li>
+        </ul>
+
+        <!-- Inline search bar -->
+        <div class="hero-search" role="search" aria-label="Quick destination search">
+          <div class="hero-search__fields-row">
+            <div class="hero-search__field">
+              <label for="hero-dest" class="hero-search__label">Para onde?</label>
+              <div class="hero-search__input-wrap">
+                <input
+                  id="hero-dest"
+                  class="hero-search__input"
+                  type="text"
+                  placeholder="Ex: Japão, Paris, Maldivas..."
+                  autocomplete="off"
+                  aria-autocomplete="list"
+                  aria-controls="hero-autocomplete"
+                  aria-expanded="false"
+                >
+                <ul class="hero-autocomplete" id="hero-autocomplete" role="listbox" hidden></ul>
+              </div>
+            </div>
+            <div class="hero-search__field hero-search__field--date">
+              <label for="hero-date" class="hero-search__label">Quando?</label>
+              <input id="hero-date" class="hero-search__input" type="month">
+            </div>
+          </div>
+          <button class="btn btn--search" type="button" id="hero-search-btn">
+            Buscar viagens
+          </button>
+        </div>
+
+        <!-- Dual CTAs below search -->
+        <div class="hero-ctas">
+          <a href="./pages/menu.html" class="btn btn--primary">Explorar destinos</a>
+          <a href="./pages/contact.html" class="btn btn--ghost">Fale conosco</a>
+        </div>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <img src="./imagens/mala.png" alt="" class="hero-img">
+      </div>
+    </section>
+
+    <!-- Search results panel — shown dynamically -->
+    <section class="search-results" id="search-results" aria-label="Search results" aria-live="polite" hidden>
+      <div class="search-results__inner">
+        <div class="search-results__header">
+          <h2 class="search-results__title" id="search-results-title">Results</h2>
+          <button class="btn-icon search-results__close" id="search-results-close" aria-label="Close results">✕</button>
+        </div>
+        <div class="search-results__grid" id="search-results-grid"></div>
+        <div class="search-results__empty" id="search-results-empty" hidden>
+          <p>😕 No results for that destination. Try "Japan", "Paris" or "Maldives".</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        <p class="footer-copyright">Copyright &copy; <span id="year"></span> Just Travel. Todos os direitos reservados.</p>
+               <p class="footer-credit">
+  Desenvolvido por 
+  <a href="https://martaisabelle.vercel.app/" target="_blank" rel="noopener noreferrer">
+    Marta Isabelle
+  </a>
+</p>
+      </div>
+      <nav class="footer-social" aria-label="Social media links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+          <img class="social-icon" src="./imagens/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (Twitter)">
+          <img class="social-icon" src="./imagens/X.png" alt="X / Twitter">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Watch us on YouTube">
+          <img class="social-icon" src="./imagens/youtube.png" alt="YouTube">
+        </a>
+        <a href="mailto:email@example.com" aria-label="Send us an email">
+          <img class="social-icon" src="./imagens/email.png" alt="Email">
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+      <div class="toast" id="booking-toast" role="status" aria-live="polite"></div>
+
+  <!-- ===== GLOBAL FAB CHAT ===== -->
+  <button class="global-chat-fab" id="global-chat-fab" aria-label="Abrir chat de suporte" aria-expanded="false">
+    <span class="global-chat-fab__icon" aria-hidden="true">💬</span>
+  </button>
+
+  <div class="global-chat-window" id="global-chat-window" aria-hidden="true">
+    <div class="global-chat-window__header">
+      <div class="global-chat-window__header-top">
+        <img src="./imagens/logo.png" alt="" class="global-chat-window__logo" aria-hidden="true">
+        <span class="global-chat-window__title">Just Travel Support</span>
+      </div>
+      <p class="global-chat-window__hours">Atendimento das 9h às 18h, seg à sexta</p>
+      <p class="global-chat-window__status">
+        <span class="global-chat-status__dot" id="global-chat-status-dot"></span>
+        <span id="global-chat-status-text">Verificando...</span>
+      </p>
+    </div>
+    <div class="global-chat-window__messages" id="global-chat-messages" aria-live="polite"></div>
+    <div class="global-chat-window__footer">
+      <input class="global-chat-window__input" id="global-chat-input" type="text"
+        placeholder="Digite sua mensagem..." autocomplete="off" aria-label="Mensagem para o suporte">
+      <button class="global-chat-window__send" id="global-chat-send" type="button">Enviar</button>
+    </div>
+  </div>
+  <!-- /GLOBAL FAB CHAT -->
+
+</body>
+</html>

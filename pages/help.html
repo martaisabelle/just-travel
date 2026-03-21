@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Central de Ajuda Just Travel — tire suas dúvidas, fale com nossos agentes e acompanhe sua reserva 24 horas por dia.">
+  <meta name="author" content="Marta Isabelle">
+
+  <title>Just Travel — Ajuda</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+
+<body class="help-page">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+
+    <div class="header-logo">
+      <a href="../index.html" aria-label="Just Travel — Home">
+        <img src="../imagens/logo.png" alt="Just Travel logo" width="80" height="auto">
+      </a>
+    </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="../index.html" class="nav-link"><img src="../imagens/home.png" alt="" class="nav-icon" aria-hidden="true">Início</a></li>
+        <li><a href="./menu.html" class="nav-link"><img src="../imagens/destinations.png" alt="" class="nav-icon" aria-hidden="true">Destinos</a></li>
+        <li><a href="./contact.html" class="nav-link"><img src="../imagens/contact.png" alt="" class="nav-icon" aria-hidden="true">Contato</a></li>
+        <li><a href="./help.html" class="nav-link" aria-current="page"><img src="../imagens/help.png" alt="" class="nav-icon" aria-hidden="true">Ajuda</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Language + Auth -->
+    <div class="header-actions">
+      <button class="header-lang" id="header-lang-btn" type="button" aria-label="Selecionar idioma" aria-expanded="false">
+        <img src="../imagens/br.png" alt="Brasil" class="header-lang__flag" id="header-lang-flag">
+        <span class="header-lang__code" id="header-lang-code">PT</span>
+        <span class="header-lang__arrow" aria-hidden="true">▼</span>
+        <div class="header-lang__dropdown" id="header-lang-dropdown" role="listbox">
+          <div class="header-lang__option" data-lang="PT" data-flag="../imagens/br.png" data-alt="Brasil" role="option">
+            <img src="../imagens/br.png" alt="Brasil"> PT
+          </div>
+          <div class="header-lang__option" data-lang="EN" data-flag="../imagens/eua.png" data-alt="EUA" role="option">
+            <img src="../imagens/eua.png" alt="EUA"> EN
+          </div>
+          <div class="header-lang__option" data-lang="ES" data-flag="../imagens/spain.png" data-alt="España" role="option">
+            <img src="../imagens/spain.png" alt="España"> ES
+          </div>
+        </div>
+      </button>
+      <a href="#" class="header-auth header-auth--register">Cadastre-se</a>
+      <a href="#" class="header-auth header-auth--login">Login</a>
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+  <!-- ===== HELP ===== -->
+  <main id="main-content" class="help-main">
+
+    <!-- Barra de título — 100% de largura, fundo escuro -->
+    <div class="help-titlebar">
+      <h2 class="help-titlebar__heading">Ajuda — Suporte ao Cliente</h2>
+    </div>
+
+    <!-- Section principal -->
+    <section class="help-section" aria-labelledby="help-heading">
+
+      <h1 class="help-section__title" id="help-heading">
+        Veja como podemos te ajudar.
+      </h1>
+
+      <!-- Caixa com borda preta — 4 cards -->
+      <div class="help-box">
+        <div class="help-cards">
+
+          <!-- Card 1: Televendas -->
+          <article class="help-card" id="help-card-televendas" aria-label="Televendas">
+            <img src="../imagens/chat2.png" alt="" aria-hidden="true" class="help-card__icon" width="30" height="30">
+            <h3 class="help-card__title">Precisa de ajuda para comprar?</h3>
+            <p class="help-card__text">
+              Fale com nosso Televendas e finalize sua compra pelo telefone.
+            </p>
+            <p class="help-card__highlight">0800 049 8790</p>
+            <p class="help-card__hours">
+              Seg–Sex: 09h às 20h<br>
+              Sáb: 09h às 18h<br>
+              Feriados: 10h às 16h
+            </p>
+          </article>
+
+          <!-- Card 2: FAQ / Perguntas frequentes -->
+          <article class="help-card" id="help-card-faq" aria-label="Perguntas frequentes">
+            <img src="../imagens/chat2.png" alt="" aria-hidden="true" class="help-card__icon" width="30" height="30">
+            <h3 class="help-card__title">Perguntas frequentes</h3>
+            <p class="help-card__text">
+              Encontre respostas rápidas para as dúvidas mais comuns sobre reservas, cancelamentos e pagamentos.
+            </p>
+            <button class="btn help-card__btn" type="button" data-action="faq">
+              Acesse
+            </button>
+          </article>
+
+          <!-- Card 3: Minha reserva -->
+          <article class="help-card" id="help-card-reserva" aria-label="Acompanhar reserva">
+            <img src="../imagens/chat2.png" alt="" aria-hidden="true" class="help-card__icon" width="30" height="30">
+            <h3 class="help-card__title">Acompanhe sua reserva</h3>
+            <p class="help-card__text">
+              Consulte o status da sua reserva, emita vouchers e solicite alterações diretamente pelo portal.
+            </p>
+            <button class="btn help-card__btn" type="button" data-action="reserva">
+              Acesse
+            </button>
+          </article>
+
+          <!-- Card 4: Cancelamentos -->
+          <article class="help-card" id="help-card-cancel" aria-label="Cancelamentos e reembolsos">
+            <img src="../imagens/chat2.png" alt="" aria-hidden="true" class="help-card__icon" width="30" height="30">
+            <h3 class="help-card__title">Cancelamentos e reembolsos</h3>
+            <p class="help-card__text">
+              Saiba como cancelar sua reserva e quais são as condições de reembolso aplicáveis.
+            </p>
+            <button class="btn help-card__btn" type="button" data-action="cancel">
+              Acesse
+            </button>
+          </article>
+
+        </div>
+        <!-- /help-cards -->
+      </div>
+      <!-- /help-box -->
+
+      <!-- FAQ accordion — injetado/expandido pelo JS -->
+      <div class="help-faq-wrap" id="help-faq-wrap">
+        <h2 class="help-faq__heading">Perguntas Frequentes</h2>
+        <dl class="help-faq" id="help-faq-list">
+          <!-- Items injected by JS -->
+        </dl>
+      </div>
+
+    </section>
+    <!-- /help-section -->
+
+  </main>
+  <!-- /HELP -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+
+    <div class="footer-inner">
+
+      <div class="footer-copy">
+        <p class="footer-copyright">Copyright &copy; <span id="year"></span> Just Travel. Todos os direitos reservados.</p>
+                <p class="footer-credit">
+  Desenvolvido por 
+  <a href="https://martaisabelle.vercel.app/" target="_blank" rel="noopener noreferrer">
+    Marta Isabelle
+  </a>
+</p>
+      </div>
+
+      <nav class="footer-social" aria-label="Social media links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Siga no Instagram">
+          <img class="social-icon" src="../imagens/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Siga no X (Twitter)">
+          <img class="social-icon" src="../imagens/X.png" alt="X / Twitter">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Assista no YouTube">
+          <img class="social-icon" src="../imagens/youtube.png" alt="YouTube">
+        </a>
+        <a href="/cdn-cgi/l/email-protection#b6d3dbd7dfdaf6d3ced7dbc6dad398d5d9db" aria-label="Envie um e-mail">
+          <img class="social-icon" src="../imagens/email.png" alt="Email">
+        </a>
+      </nav>
+
+    </div>
+
+  </footer>
+
+  <!-- ===== FAB CHAT (help page only) ===== -->
+  <button class="help-chat-fab" id="help-chat-fab" aria-label="Abrir chat de suporte" aria-expanded="false">
+    <span class="help-chat-fab__icon" aria-hidden="true">💬</span>
+  </button>
+
+  <div class="help-chat-window" id="help-chat-window" aria-hidden="true">
+    <div class="help-chat-window__header">
+      <div class="help-chat-window__header-top">
+        <img src="../imagens/logo.png" alt="" class="help-chat-window__logo" aria-hidden="true">
+        <span class="help-chat-window__title">Just Travel Support</span>
+      </div>
+      <p class="help-chat-window__hours">Atendimento das 9h às 18h, seg à sexta</p>
+      <p class="help-chat-window__status" id="help-chat-status">
+        <span class="help-chat-status__dot" id="help-chat-status-dot"></span>
+        <span id="help-chat-status-text">Verificando...</span>
+      </p>
+    </div>
+    <div class="help-chat-window__messages" id="help-chat-messages" aria-live="polite"></div>
+    <div class="help-chat-window__footer">
+      <input
+        class="help-chat-window__input"
+        id="help-chat-input"
+        type="text"
+        placeholder="Digite sua mensagem..."
+        autocomplete="off"
+        aria-label="Mensagem para o suporte"
+      >
+      <button class="help-chat-window__send" id="help-chat-send" type="button">Enviar</button>
+    </div>
+  </div>
+    <!-- /FAB CHAT -->
+
+</body>
+</html>

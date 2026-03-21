@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Just Travel — explore our top destinations around the world. From Japan to the Maldives, find your next adventure.">
+  <meta name="keywords" content="travel destinations, Japan, Australia, Paris, London, Maldives, Peru, California">
+  <meta name="author" content="Marta Isabelle">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Just Travel — Destinations">
+  <meta property="og:description" content="Explore our handpicked destinations around the world.">
+  <meta property="og:type" content="website">
+
+  <title>Just Travel — Destinations</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+
+    <div class="header-logo">
+      <a href="../index.html" aria-label="Just Travel — Home">
+        <img src="../imagens/logo.png" alt="Just Travel logo" width="80" height="auto">
+      </a>
+    </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="../index.html" class="nav-link"><img src="../imagens/home.png" alt="" class="nav-icon" aria-hidden="true">Início</a></li>
+        <li><a href="./menu.html" class="nav-link" aria-current="page"><img src="../imagens/destinations.png" alt="" class="nav-icon" aria-hidden="true">Destinos</a></li>
+        <li><a href="./contact.html" class="nav-link"><img src="../imagens/contact.png" alt="" class="nav-icon" aria-hidden="true">Contato</a></li>
+        <li><a href="./help.html" class="nav-link"><img src="../imagens/help.png" alt="" class="nav-icon" aria-hidden="true">Ajuda</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Language + Auth -->
+    <div class="header-actions">
+      <button class="header-lang" id="header-lang-btn" type="button" aria-label="Selecionar idioma" aria-expanded="false">
+        <img src="../imagens/br.png" alt="Brasil" class="header-lang__flag" id="header-lang-flag">
+        <span class="header-lang__code" id="header-lang-code">PT</span>
+        <span class="header-lang__arrow" aria-hidden="true">▼</span>
+        <div class="header-lang__dropdown" id="header-lang-dropdown" role="listbox">
+          <div class="header-lang__option" data-lang="PT" data-flag="../imagens/br.png" data-alt="Brasil" role="option">
+            <img src="../imagens/br.png" alt="Brasil"> PT
+          </div>
+          <div class="header-lang__option" data-lang="EN" data-flag="../imagens/eua.png" data-alt="EUA" role="option">
+            <img src="../imagens/eua.png" alt="EUA"> EN
+          </div>
+          <div class="header-lang__option" data-lang="ES" data-flag="../imagens/spain.png" data-alt="España" role="option">
+            <img src="../imagens/spain.png" alt="España"> ES
+          </div>
+        </div>
+      </button>
+      <a href="#" class="header-auth header-auth--register">Cadastre-se</a>
+      <a href="#" class="header-auth header-auth--login">Login</a>
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+  <!-- ===== DESTINATIONS ===== -->
+  <main id="main-content" class="destinations-page">
+
+    <!-- Row 1 — 2 large cards -->
+    <section class="destinos destinos--large" aria-label="Featured destinations">
+
+      <figure class="destino-card">
+        <img src="../imagens/japao.jpg" alt="Cherry blossom street in Kyoto, Japan" class="destino-img">
+        <figcaption class="destino-label">Japão</figcaption>
+      </figure>
+
+      <figure class="destino-card">
+        <img src="../imagens/australia.png" alt="Sydney Opera House and harbour, Australia" class="destino-img">
+        <figcaption class="destino-label">Austrália</figcaption>
+      </figure>
+
+    </section>
+
+    <!-- Row 2 — 3 small cards -->
+    <section class="destinos destinos--small" aria-label="South America and Europe destinations">
+
+      <figure class="destino-card">
+        <img src="../imagens/brasil.jpg" alt="Aerial view of Rio de Janeiro with Sugarloaf Mountain" class="destino-img">
+        <figcaption class="destino-label">Rio de Janeiro</figcaption>
+      </figure>
+
+      <figure class="destino-card">
+        <img src="../imagens/suiça.jpg" alt="Swiss Alps with snow-capped peaks and alpine village" class="destino-img">
+        <figcaption class="destino-label">Suíça</figcaption>
+      </figure>
+
+      <figure class="destino-card">
+        <img src="../imagens/paris.jpg" alt="Eiffel Tower at sunset in Paris, France" class="destino-img">
+        <figcaption class="destino-label">França</figcaption>
+      </figure>
+
+    </section>
+
+    <!-- Row 3 — 2 large cards -->
+    <section class="destinos destinos--large" aria-label="Europe and Asia destinations">
+
+      <figure class="destino-card">
+        <img src="../imagens/londres.jpg" alt="Tower Bridge over the Thames river in London, UK" class="destino-img">
+        <figcaption class="destino-label">Londres</figcaption>
+      </figure>
+
+      <figure class="destino-card">
+        <img src="../imagens/coreia.jpg" alt="Traditional Gyeongbokgung Palace in Seoul, South Korea" class="destino-img">
+        <figcaption class="destino-label">Coréia do Sul</figcaption>
+      </figure>
+
+    </section>
+
+    <!-- Row 4 — 3 small cards -->
+    <section class="destinos destinos--small" aria-label="Tropical and Americas destinations">
+
+      <figure class="destino-card">
+        <img src="../imagens/maldivas.jpg" alt="Crystal-clear turquoise waters and overwater bungalows in the Maldives" class="destino-img">
+        <figcaption class="destino-label">Maldivas</figcaption>
+      </figure>
+
+      <figure class="destino-card">
+        <img src="../imagens/peru.jpg" alt="Machu Picchu Inca citadel in the Peruvian Andes" class="destino-img">
+        <figcaption class="destino-label">Peru</figcaption>
+      </figure>
+
+      <figure class="destino-card">
+        <img src="../imagens/losangeles.jpg" alt="Hollywood sign and downtown skyline of Los Angeles, California" class="destino-img">
+        <figcaption class="destino-label">Califórnia</figcaption>
+      </figure>
+
+    </section>
+
+  </main>
+  <!-- /DESTINATIONS -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+
+    <div class="footer-inner">
+
+      <div class="footer-copy">
+        <p class="footer-copyright">Copyright &copy; <span id="year"></span> Just Travel. Todos os direitos reservados.</p>
+                <p class="footer-credit">
+  Desenvolvido por 
+  <a href="https://martaisabelle.vercel.app/" target="_blank" rel="noopener noreferrer">
+    Marta Isabelle
+  </a>
+</p>
+      </div>
+
+      <nav class="footer-social" aria-label="Social media links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+          <img class="social-icon" src="../imagens/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (Twitter)">
+          <img class="social-icon" src="../imagens/X.png" alt="X / Twitter">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Watch us on YouTube">
+          <img class="social-icon" src="../imagens/youtube.png" alt="YouTube">
+        </a>
+        <a href="mailto:email@example.com" aria-label="Send us an email">
+          <img class="social-icon" src="../imagens/email.png" alt="Email">
+        </a>
+      </nav>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ===== GLOBAL FAB CHAT ===== -->
+  <button class="global-chat-fab" id="global-chat-fab" aria-label="Abrir chat de suporte" aria-expanded="false">
+    <span class="global-chat-fab__icon" aria-hidden="true">💬</span>
+  </button>
+
+  <div class="global-chat-window" id="global-chat-window" aria-hidden="true">
+    <div class="global-chat-window__header">
+      <div class="global-chat-window__header-top">
+        <img src="../imagens/logo.png" alt="" class="global-chat-window__logo" aria-hidden="true">
+        <span class="global-chat-window__title">Just Travel Support</span>
+      </div>
+      <p class="global-chat-window__hours">Atendimento das 9h às 18h, seg à sexta</p>
+      <p class="global-chat-window__status">
+        <span class="global-chat-status__dot" id="global-chat-status-dot"></span>
+        <span id="global-chat-status-text">Verificando...</span>
+      </p>
+    </div>
+    <div class="global-chat-window__messages" id="global-chat-messages" aria-live="polite"></div>
+    <div class="global-chat-window__footer">
+      <input class="global-chat-window__input" id="global-chat-input" type="text"
+        placeholder="Digite sua mensagem..." autocomplete="off" aria-label="Mensagem para o suporte">
+      <button class="global-chat-window__send" id="global-chat-send" type="button">Enviar</button>
+    </div>
+  </div>
+  <!-- /GLOBAL FAB CHAT -->
+
+</body>
+</html>
