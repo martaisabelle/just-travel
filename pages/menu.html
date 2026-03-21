@@ -68,17 +68,29 @@
   <!-- ===== DESTINATIONS ===== -->
   <main id="main-content" class="destinations-page">
 
+    <!-- Page header -->
+    <div class="destinations-header">
+      <h1 class="destinations-header__title">Para onde você quer ir?</h1>
+      <p class="destinations-header__sub">Explore nossos destinos mais populares e encontre sua próxima aventura.</p>
+    </div>
+
     <!-- Row 1 — 2 large cards -->
     <section class="destinos destinos--large" aria-label="Featured destinations">
 
       <figure class="destino-card">
         <img src="../imagens/japao.jpg" alt="Cherry blossom street in Kyoto, Japan" class="destino-img">
-        <figcaption class="destino-label">Japão</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Japão</figcaption>
+          <span class="destino-region">Ásia</span>
+        </div>
       </figure>
 
       <figure class="destino-card">
         <img src="../imagens/australia.png" alt="Sydney Opera House and harbour, Australia" class="destino-img">
-        <figcaption class="destino-label">Austrália</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Austrália</figcaption>
+          <span class="destino-region">Oceania</span>
+        </div>
       </figure>
 
     </section>
@@ -88,17 +100,26 @@
 
       <figure class="destino-card">
         <img src="../imagens/brasil.jpg" alt="Aerial view of Rio de Janeiro with Sugarloaf Mountain" class="destino-img">
-        <figcaption class="destino-label">Rio de Janeiro</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Rio de Janeiro</figcaption>
+          <span class="destino-region">América do Sul</span>
+        </div>
       </figure>
 
       <figure class="destino-card">
         <img src="../imagens/suiça.jpg" alt="Swiss Alps with snow-capped peaks and alpine village" class="destino-img">
-        <figcaption class="destino-label">Suíça</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Suíça</figcaption>
+          <span class="destino-region">Europa</span>
+        </div>
       </figure>
 
       <figure class="destino-card">
         <img src="../imagens/paris.jpg" alt="Eiffel Tower at sunset in Paris, France" class="destino-img">
-        <figcaption class="destino-label">França</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">França</figcaption>
+          <span class="destino-region">Europa</span>
+        </div>
       </figure>
 
     </section>
@@ -108,12 +129,18 @@
 
       <figure class="destino-card">
         <img src="../imagens/londres.jpg" alt="Tower Bridge over the Thames river in London, UK" class="destino-img">
-        <figcaption class="destino-label">Londres</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Londres</figcaption>
+          <span class="destino-region">Europa</span>
+        </div>
       </figure>
 
       <figure class="destino-card">
         <img src="../imagens/coreia.jpg" alt="Traditional Gyeongbokgung Palace in Seoul, South Korea" class="destino-img">
-        <figcaption class="destino-label">Coréia do Sul</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Coréia do Sul</figcaption>
+          <span class="destino-region">Ásia</span>
+        </div>
       </figure>
 
     </section>
@@ -123,17 +150,26 @@
 
       <figure class="destino-card">
         <img src="../imagens/maldivas.jpg" alt="Crystal-clear turquoise waters and overwater bungalows in the Maldives" class="destino-img">
-        <figcaption class="destino-label">Maldivas</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Maldivas</figcaption>
+          <span class="destino-region">Oceano Índico</span>
+        </div>
       </figure>
 
       <figure class="destino-card">
         <img src="../imagens/peru.jpg" alt="Machu Picchu Inca citadel in the Peruvian Andes" class="destino-img">
-        <figcaption class="destino-label">Peru</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Peru</figcaption>
+          <span class="destino-region">América do Sul</span>
+        </div>
       </figure>
 
       <figure class="destino-card">
         <img src="../imagens/losangeles.jpg" alt="Hollywood sign and downtown skyline of Los Angeles, California" class="destino-img">
-        <figcaption class="destino-label">Califórnia</figcaption>
+        <div class="destino-overlay">
+          <figcaption class="destino-label">Califórnia</figcaption>
+          <span class="destino-region">América do Norte</span>
+        </div>
       </figure>
 
     </section>
@@ -170,13 +206,12 @@
           <img class="social-icon" src="../imagens/email.png" alt="Email">
         </a>
       </nav>
-      </nav>
     </div>
   </footer>
 
   <!-- ===== GLOBAL FAB CHAT ===== -->
   <button class="global-chat-fab" id="global-chat-fab" aria-label="Abrir chat de suporte" aria-expanded="false">
-    <span class="global-chat-fab__icon" aria-hidden="true">💬</span>
+    <img src="../imagens/chat.png" alt="" class="global-chat-fab__icon" aria-hidden="true" width="24" height="24">
   </button>
 
   <div class="global-chat-window" id="global-chat-window" aria-hidden="true">
@@ -198,7 +233,4 @@
       <button class="global-chat-window__send" id="global-chat-send" type="button">Enviar</button>
     </div>
   </div>
-  <!-- /GLOBAL FAB CHAT -->
-
-</body>
-</html>
+  <!-

@@ -74,8 +74,9 @@
 
           <!-- Card: Envie mensagem -->
           <article class="contact-card is-visible" id="card-mensagem">
-            <img src="../imagens/chat2.png" alt="" aria-hidden="true"
-              class="contact-card__icon" width="40" height="40">
+            <div class="contact-card__icon-wrap">
+              <img src="../imagens/chat2.png" alt="" aria-hidden="true" class="contact-card__icon">
+            </div>
             <h3 class="contact-card__title">Envie uma mensagem para a gente</h3>
             <p class="contact-card__text">
               Entre em contato com nossos agentes para falar a respeito da sua reserva.
@@ -93,8 +94,9 @@
 
           <!-- Card: Ligue -->
           <article class="contact-card is-visible">
-            <img src="../imagens/phone-contact.png" alt="" aria-hidden="true"
-              class="contact-card__icon" width="38" height="38">
+            <div class="contact-card__icon-wrap">
+              <img src="../imagens/phone-contact.png" alt="" aria-hidden="true" class="contact-card__icon">
+            </div>
             <h3 class="contact-card__title">Ligue para a gente</h3>
             <p class="contact-card__text">
               Se for algo urgente, você pode nos ligar em um número local ou internacional.
@@ -172,17 +174,16 @@
         <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Assista no YouTube">
           <img class="social-icon" src="../imagens/youtube.png" alt="YouTube">
         </a>
-        <a href="mailto:email@example.com" aria-label="Envie um e-mail">
+        <a href="/cdn-cgi/l/email-protection#9efbf3fff7f2defbe6fff3eef2fbb0fdf1f3" aria-label="Envie um e-mail">
           <img class="social-icon" src="../imagens/email.png" alt="Email">
         </a>
-      </nav>
       </nav>
     </div>
   </footer>
 
   <!-- ===== GLOBAL FAB CHAT ===== -->
   <button class="global-chat-fab" id="global-chat-fab" aria-label="Abrir chat de suporte" aria-expanded="false">
-    <span class="global-chat-fab__icon" aria-hidden="true">💬</span>
+    <img src="../imagens/chat.png" alt="" class="global-chat-fab__icon" aria-hidden="true" width="24" height="24">
   </button>
 
   <div class="global-chat-window" id="global-chat-window" aria-hidden="true">
@@ -201,10 +202,4 @@
     <div class="global-chat-window__footer">
       <input class="global-chat-window__input" id="global-chat-input" type="text"
         placeholder="Digite sua mensagem..." autocomplete="off" aria-label="Mensagem para o suporte">
-      <button class="global-chat-window__send" id="global-chat-send" type="button">Enviar</button>
-    </div>
-  </div>
-  <!-- /GLOBAL FAB CHAT -->
-
-</body>
-</html>
+      <button class="global-chat-window__send" id="global-chat-send" type="button">E
